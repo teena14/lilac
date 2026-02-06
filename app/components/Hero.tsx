@@ -21,15 +21,15 @@ export default function Hero() {
       {/* Text */}
       <div className="flex flex-col items-center text-center">
         <h2 className="text-4xl lg:text-5xl font-medium leading-tight mb-6">
-          Live your life <br /> in full bloom
+          A Calm Place to Begin
         </h2>
 
         <p className="text-sm mb-8 max-w-md">
-          Therapy for Adults in Minneapolis, MN.
+          Therapy for adults navigating anxiety, trauma, and burnout in Santa Monica, CA.
         </p>
 
         <button className="border border-[#2f3a1f] px-6 py-3 text-sm tracking-wide hover:bg-[#2f3a1f] hover:text-white transition">
-          CONNECT WITH ME →
+          Book a free consult →
         </button>
       </div>
 

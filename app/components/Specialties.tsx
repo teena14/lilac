@@ -2,21 +2,21 @@ import Image from "next/image";
 
 const specialties = [
   {
-    title: "Self-Esteem",
+    title: "Anxiety & Panic",
     description:
-      "Building a strong sense of self-worth is key to living a fulfilled life. Let's work together to bolster your self-esteem.",
+      "Support for ongoing worry, overthinking, physical tension, and feeling constantly on edge. Therapy focuses on helping you feel more regulated, steady, and at ease in daily life.",
     image: "/specialty-1.jpeg",
   },
   {
-    title: "Relationships",
+    title: "Trauma & Past Experiences",
     description:
-      "Navigating relationships can be complex. I'm here to guide you through these complexities to help you form healthier connections.",
+      "Carefully paced therapy for experiences that still feel present. This includes both single events and long-standing patterns that continue to affect safety, confidence, or relationships.",
     image: "/specialty-2.jpeg",
   },
   {
-    title: "Burnout",
+    title: "Burnout & Chronic Stress",
     description:
-      "Feeling overwhelmed by your career is more common than you think. Together, we'll identify strategies to manage and prevent burnout.",
+      "Support for emotional exhaustion and ongoing pressure. I often work with professionals and high-achieving adults who feel disconnected after long periods of stress.",
     image: "/specialty-3.jpeg",
   },
 ];
@@ -24,22 +24,20 @@ const specialties = [
 export default function Specialties() {
   return (
     <section className="bg-[#f7f4ef] py-24">
-      {/* Section heading */}
-      <div className="text-center mb-16">
-        <h2 className="text-3xl lg:text-4xl font-medium">
+      <div className="text-center mb-12">
+        <h2 className="font-heading text-3xl md:text-4xl font-medium">
           My Specialties
         </h2>
       </div>
 
-      {/* Cards */}
-      <div className="grid gap-10 px-6 lg:px-16 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 px-6 md:px-16 md:grid-cols-2 lg:grid-cols-3">
         {specialties.map((item) => (
           <div
             key={item.title}
-            className="border border-[#2f3a1f] p-8 grid grid-rows-[1fr_auto]"
+            className="border border-[#2f3a1f] bg-[#E5E6E1] p-8 grid grid-rows-[1fr_auto]"
           >
             <div className="mb-8">
-              <h3 className="text-lg font-medium mb-4 text-left">
+              <h3 className="font-heading text-lg font-medium mb-4 text-left">
                 {item.title}
               </h3>
 
@@ -48,7 +46,7 @@ export default function Specialties() {
               </p>
             </div>
 
-            <div className="relative w-40 h-40 mx-auto">
+            <div className="relative w-60 h-60 mx-auto">
               <Image
                 src={item.image}
                 alt={item.title}

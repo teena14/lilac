@@ -4,7 +4,12 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+  extend: {
+    fontFamily: {
+      body: ['var(--font-geist-sans)'],
+      heading: ['var(--font-bricolage)'],
+    },
   },
+},
   plugins: [],
 };

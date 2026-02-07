@@ -6,17 +6,22 @@ const items = [
   {
     title: 'Education',
     content:
-      'I hold a Master&apos;s degree in Counseling Psychology and have completed extensive clinical training in individual and group therapy.',
+      "Dr. Maya Reynolds holds a Doctor of Psychology (PsyD) degree and completed her graduate training with a focus on adult mental health, including anxiety, trauma, and stress-related concerns.",
   },
   {
     title: 'Licensure',
     content:
-      'I am a licensed mental health professional in the state of Minnesota and adhere to all ethical and professional standards.',
+      "She is a licensed clinical psychologist in the state of California and provides psychotherapy to adults through her private practice in Santa Monica and via secure telehealth across California.",
   },
   {
-    title: 'Certifications',
+    title: 'Clinical Training & Experience',
     content:
-      'I am certified in evidence-based therapeutic approaches including CBT and trauma-informed care.',
+      "Dr. Maya completed extensive supervised clinical training working with adults navigating anxiety, panic, trauma, burnout, and the ongoing effects of chronic stress. Her experience includes both short-term, focused therapy and longer-term depth-oriented work.",
+  },
+  {
+    title: 'Professional Development',
+    content:
+      "Dr. Maya maintains active licensure and stays aligned with current ethical standards and evidence-based practices in clinical psychology.",
   },
 ];
 
@@ -25,15 +30,11 @@ export default function ProfessionalBackground() {
 
   return (
     <section className="bg-[#f1eee8] py-24">
-      <div className="max-w-3xl mx-auto px-6">
-
-        {/* Title */}
-        <h2 className="text-center text-3xl lg:text-4xl font-medium mb-10">
+      <div className="max-w-3xl mx-auto px-6 md:px-16">
+        <h2 className="font-heading text-center text-3xl md:text-4xl font-medium mb-8">
           My Professional Background
         </h2>
 
-
-        {/* Accordion */}
         <div className="border-t border-[#2f3a1f]">
           {items.map((item, index) => {
             const isOpen = openIndex === index;
@@ -56,7 +57,7 @@ export default function ProfessionalBackground() {
                 </button>
 
                 {isOpen && (
-                  <div className="pb-6 text-sm leading-relaxed max-w-xl">
+                  <div className="pb-6 text-base leading-relaxed max-w-xl">
                     {item.content}
                   </div>
                 )}

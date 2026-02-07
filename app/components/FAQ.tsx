@@ -5,19 +5,24 @@ import Image from 'next/image';
 
 const faqs = [
   {
-    question: 'Do you take insurance?',
+    question: "Is therapy right for me if I'm still functioning day to day?",
     answer:
-      'I do not accept insurance at this time. However, I can provide a superbill upon request that you may submit to your insurance provider.',
+      "Many people I work with are managing work, relationships, and responsibilities while feeling anxious, overwhelmed, or disconnected internally. You don't have to be in crisis to start therapy—if things feel heavier than you'd like to carry alone, this can be a supportive place to explore that.",
   },
   {
-    question: 'What are your rates?',
+    question: "What is your approach to therapy?",
     answer:
-      'Session rates vary depending on the type and length of session. Please reach out directly for current pricing information.',
+      "My approach is warm, collaborative, and paced with care. We'll work together to understand what's contributing to your current challenges while helping you feel more grounded and supported in daily life.",
   },
   {
-    question: 'Do you have any openings?',
+    question: "Do you offer in-person or virtual sessions?",
     answer:
-      'Availability changes regularly. The best way to find out is to contact me directly so we can discuss current openings.',
+      "I offer in-person therapy in Santa Monica, California, as well as secure telehealth sessions for adults located in California. We can talk about which option feels like the best fit for you.",
+  },
+  {
+    question: "How do I get started?",
+    answer:
+      "The first step is scheduling a free consultation. This gives us a chance to connect briefly, ask questions, and see whether working together feels like a good fit.",
   },
 ];
 
@@ -25,24 +30,21 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-[#f7f4ef] py-24">
-      <div className="grid lg:grid-cols-2 gap-16 px-6 lg:px-16 items-start">
-
-        {/* LEFT IMAGE */}
+    <section className="bg-[#E9DEC8] py-24">
+      <div className="grid md:grid-cols-2 gap-12 px-6 md:px-16 items-start">
         <div className="flex justify-center">
-      <div className="relative w-[70%] h-[520px] lg:h-[580px]">
-          <Image
-            src="/faq.jpeg"
-            alt="Dried flowers"
-            fill
-            className="object-cover rounded-t-full"
-          />
-        </div>
+          <div className="relative w-[70%] h-[520px] md:h-[560px] lg:h-[580px]">
+            <Image
+              src="/faq.jpeg"
+              alt="Dried flowers"
+              fill
+              className="object-cover rounded-t-full"
+            />
+          </div>
         </div>
 
-        {/* RIGHT FAQ */}
         <div className="flex flex-col justify-center h-full">
-          <h2 className="text-3xl lg:text-4xl font-medium mb-12">
+          <h2 className="font-heading text-3xl md:text-4xl font-medium mb-8">
             FAQs
           </h2>
 
@@ -58,7 +60,7 @@ export default function FAQ() {
                       setOpenIndex(isOpen ? null : index)
                     }
                   >
-                    <span className="text-sm">
+                    <span className="text-base">
                       {faq.question}
                     </span>
 
@@ -68,7 +70,7 @@ export default function FAQ() {
                   </button>
 
                   {isOpen && (
-                    <div className="pb-6 text-sm leading-relaxed max-w-md">
+                    <div className="pb-6 text-base leading-relaxed max-w-md">
                       {faq.answer}
                     </div>
                   )}

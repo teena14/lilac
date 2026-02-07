@@ -8,6 +8,8 @@ import FAQ from './components/FAQ';
 import ProfessionalBackground from './components/ProfessionalBackground';
 import GetStarted from './components/GetStarted';
 import Footer from './components/Footer';
+import OfficeSection from './components/OfficeSection';
+
 
 export default function Home() {
   return (
@@ -18,6 +20,7 @@ export default function Home() {
       <Specialties />
       <NotAlone />
       <ImLilac />
+      <OfficeSection />
       <FAQ />
       <ProfessionalBackground />
       <GetStarted />

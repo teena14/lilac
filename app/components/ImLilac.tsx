@@ -2,35 +2,29 @@ import Image from "next/image";
 
 export default function ImLilac() {
   return (
-    <section className="bg-[#f7f4ef] py-24">
-      <div className="grid lg:grid-cols-2 items-center gap-7 px-6 lg:px-16">
-
-        {/* LEFT TEXT */}
-        <div>
-          <h2 className="text-3xl lg:text-4xl font-medium mb-6">
-            Hi, I&apos;m Lilac.
+    <section className="bg-[#f1eee8] py-24">
+      <div className="grid md:grid-cols-2 items-center gap-12 px-6 md:px-16">
+        <div className="order-2 md:order-1">
+          <h2 className="font-heading text-3xl md:text-4xl font-medium mb-6">
+            Hi, I&apos;m Dr. Maya.
           </h2>
 
-          <p className="text-sm leading-relaxed mb-8 ">
-            I&apos;m committed to providing a safe and supportive environment
-            where we can explore your thoughts, feelings, and behaviors. With
-            empathy and guidance, we&apos;ll work together to navigate the
-            challenges life throws your way.
+          <p className="text-base leading-relaxed mb-8">
+            I work with adults who are feeling anxious, stressed, or worn down,
+            often while continuing to function and care for others. My goal is
+            to offer a steady, supportive space where you can slow down, feel
+            understood, and begin making sense of what you&apos;re carrying.
           </p>
 
-            <div className="flex justify-center">
-            <button className="border border-[#2f3a1f] px-6 py-3 text-sm tracking-wide hover:bg-[#2f3a1f] hover:text-white transition">
-                LET&apos;S CHAT →
+          <div className="flex justify-center">
+            <button className="border border-[#2f3a1f] px-6 py-3 text-base tracking-wide hover:bg-[#2f3a1f] hover:text-white transition">
+              LET&apos;S TALK →
             </button>
-            </div>
-
+          </div>
         </div>
 
-        {/* RIGHT IMAGE GROUP */}
-        <div className="relative flex justify-center">
-
-          {/* Main image */}
-          <div className="relative w-[70%] h-[520px] lg:h-[600px]">
+        <div className="relative flex justify-center order-1 md:order-2">
+          <div className="relative w-[70%] h-[520px]  lg:h-[600px]">
             <Image
               src="/im-lilac-main.jpeg"
               alt="Lilac holding flowers"
@@ -38,19 +32,7 @@ export default function ImLilac() {
               className="object-cover rounded-t-full"
             />
           </div>
-
-          {/* Small overlapping image */}
-          <div className="absolute -bottom-10 -right-4 w-60 h-60">
-            <Image
-              src="/im-lilac-small.jpeg"
-              alt="Flowers close-up"
-              fill
-              className="object-cover rounded-full"
-            />
-          </div>
-
         </div>
-
       </div>
     </section>
   );

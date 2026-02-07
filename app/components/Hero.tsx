@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="grid md:grid-cols-2 gap-12 px-6 md:px-16 py-24 items-center">
+    <section className="grid md:grid-cols-2 gap-12 px-6 md:px-16 py-10 items-center">
       <div className="flex justify-center">
         <div className="relative w-[85%] h-[520px] md:h-[600px] lg:h-[700px]">
           <Image

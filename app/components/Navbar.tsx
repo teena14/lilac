@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <>
       {/* NAVBAR */}
-      <header className="flex items-center justify-between px-6 md:px-16 py-6">
+      <header className="flex items-center justify-between px-6 md:px-16 pt-6">
 
         {/* LEFT SIDE */}
         <div className="flex items-center gap-4">
@@ -25,7 +25,7 @@ export default function Navbar() {
           </button>
 
           {/* Desktop Logo */}
-          <h1 className="hidden md:block font-heading text-2xl font-medium tracking-wide text-green-900">
+          <h1 className="hidden md:block font-heading text-2xl font-medium tracking-wide ">
             Dr. Maya
           </h1>
         </div>
@@ -37,8 +37,8 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile Logo (rightmost) */}
-        <h1 className="md:hidden font-heading text-xl font-medium tracking-wide text-green-900">
-          Lilac Template
+        <h1 className="md:hidden font-heading text-xl font-medium tracking-wide ">
+          Dr Maya
         </h1>
       </header>
 

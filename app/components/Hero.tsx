@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -24,9 +25,12 @@ export default function Hero() {
           Therapy for adults navigating anxiety, trauma, and burnout in Santa Monica, CA.
         </p>
 
-        <button className="border border-[#2f3a1f] px-6 py-3 text-base tracking-wide hover:bg-[#2f3a1f] hover:text-white transition">
+        <Link 
+          href="/contact"
+          className="border border-[#2f3a1f] px-6 py-3 text-base tracking-wide hover:bg-[#2f3a1f] hover:text-white transition"
+        >
           Book a free consult →
-        </button>
+        </Link>
       </div>
 
     </section>

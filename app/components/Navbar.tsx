@@ -11,7 +11,7 @@ export default function Navbar() {
       {/* NAVBAR */}
       <header className="flex items-center justify-between px-6 md:px-16 pt-6">
 
-        {/* LEFT SIDE */}
+        {/* LEFT SIDE — logo + mobile hamburger */}
         <div className="flex items-center gap-4">
 
           {/* Mobile Hamburger */}
@@ -25,21 +25,25 @@ export default function Navbar() {
           </button>
 
           {/* Desktop Logo */}
-          <h1 className="hidden md:block font-heading text-2xl font-medium tracking-wide ">
-            Dr. Maya
-          </h1>
+          <Link href="/">
+            <h1 className="hidden md:block font-heading text-2xl font-medium tracking-wide hover:opacity-70 transition-opacity">
+              Dr. Maya
+            </h1>
+          </Link>
+
+          {/* Mobile Logo */}
+          <Link href="/" className="md:hidden">
+            <h1 className="font-heading text-xl font-medium tracking-wide hover:opacity-70 transition-opacity">
+              Dr Maya
+            </h1>
+          </Link>
         </div>
 
-        {/* Desktop Nav */}
+        {/* RIGHT SIDE — Desktop Nav */}
         <nav className="hidden md:flex gap-8 text-lg">
-          <Link href="#" className="hover:underline">Blog</Link>
-          <Link href="#" className="hover:underline">Contact</Link>
+          <Link href="/blog" className="hover:underline">Blog</Link>
+          <Link href="/contact" className="hover:underline">Contact</Link>
         </nav>
-
-        {/* Mobile Logo (rightmost) */}
-        <h1 className="md:hidden font-heading text-xl font-medium tracking-wide ">
-          Dr Maya
-        </h1>
       </header>
 
       {/* MOBILE FULLSCREEN MENU */}
@@ -55,9 +59,11 @@ export default function Navbar() {
               <span className="block w-6 h-[2px] bg-green-900 -rotate-45"></span>
             </button>
 
-            <h1 className="font-heading text-xl font-medium tracking-wide text-green-900">
-              Lilac Template
-            </h1>
+            <Link href="/" onClick={() => setMenuOpen(false)}>
+              <h1 className="font-heading text-xl font-medium tracking-wide text-green-900 hover:opacity-70 transition-opacity">
+                Dr. Maya
+              </h1>
+            </Link>
 
             <div className="w-6"></div>
           </div>
@@ -65,8 +71,8 @@ export default function Navbar() {
           {/* Menu links */}
           <div className="flex flex-1 items-center justify-center">
             <nav className="flex flex-col gap-6 text-3xl font-medium text-green-900 text-center">
-              <Link href="#" onClick={() => setMenuOpen(false)}>Blog</Link>
-              <Link href="#" onClick={() => setMenuOpen(false)}>Contact</Link>
+              <Link href="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+              <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
             </nav>
           </div>
 
